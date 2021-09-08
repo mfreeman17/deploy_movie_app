@@ -1,0 +1,38 @@
+/* Styles go here */
+body{
+  background: black;
+  color: white;
+}
+
+.token {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.scroll > .row {
+  overflow-y : hidden;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+
+.image-container{
+  position: relative;
+  max-width: 320px;
+  transition:  transform 0.2s
+}
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  transition: 0.3s ease;
+  opacity:  0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
