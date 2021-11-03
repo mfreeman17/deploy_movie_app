@@ -13,7 +13,7 @@ class Movie extends React.Component {
 
 
   getMovieRequest = async () =>{
-    const url = "http://www.omdbapi.com/?i="+ this.props.match.params.id+"&apikey=283116eb"
+    const url = "https://www.omdbapi.com/?i="+ this.props.match.params.id+"&apikey=283116eb"
     console.log("url", url)
     const response = await fetch(url);
     const movieJson = await response.json();
@@ -68,8 +68,7 @@ class Movie extends React.Component {
     console.log("new watch list", newWatchlist)
 
     localStorage.setItem("react-movie-app-watchlist", JSON.stringify(newWatchlist))
-    window.location.reload();
-
+    window.location.reload()
   }
 
   removeFromWatchList = () => {
@@ -78,13 +77,13 @@ class Movie extends React.Component {
 		);
 
     localStorage.setItem("react-movie-app-watchlist", JSON.stringify(newWatchlist))
-    window.location.reload();
+    window.location.reload()
 
-	};
+	}
 
   render(){
-    let watchlistString = "Add to Watchlist"
-    let watchlistFunction = this.addToWatchList
+    let watchlistString = "Add to Watchlist";
+    let watchlistFunction = this.addToWatchList;
     for (var index = 0; index < this.state.watchlist.length; ++index) {
 
        var movie = this.state.watchlist[index];

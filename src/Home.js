@@ -11,7 +11,7 @@ import './App.css';
 class Home extends React.Component {
 
   getMovieRequest = async () => {
-    const url = "http://www.omdbapi.com/?s="+ this.state.search + "&apikey=283116eb"
+    const url = "https://www.omdbapi.com/?s="+ this.state.search + "&apikey=283116eb"
     const response = await fetch(url);
     const movieJson = await response.json();
     this.setState({movies: movieJson.Search})
